@@ -17,20 +17,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private String result = ""; // 当前的计算结果
     private String showText = ""; // 显示的文本内容
 
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // 从布局文件中获取名叫tv_result的文本视图
+
         tv_result = findViewById(R.id.tv_result);
-        // 下面给每个按钮控件都注册了点击监听器
+
         findViewById(R.id.btn_cancel).setOnClickListener(this); // “取消”按钮
         findViewById(R.id.btn_divide).setOnClickListener(this); // “除法”按钮
         findViewById(R.id.btn_multiply).setOnClickListener(this); // “乘法”按钮
@@ -168,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 clear();
             }
             if (operator.equals("")) { // 无运算符，则继续拼接第一个操作数
-                firstNum = firstNum+inputText;
+                firstNum = firstNum + inputText;
             } else { // 有运算符，则继续拼接第二个操作数
                 secondNum = secondNum + inputText;
             }
